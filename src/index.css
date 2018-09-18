@@ -276,6 +276,7 @@ template {
 
 body {
   background: #FFF;
+  overflow-x: hidden;
   font-size: 0.875rem;
   color: #A7A7A7;
   font-family: "Merriweather", serif;
@@ -308,13 +309,18 @@ h2 {
 img {
   max-width: 100%; }
 
+.wrapper {
+  transition: transform 250ms ease-out; }
+
 .Nav {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  right: 10%;
-  z-index: 88; }
+  right: 20%;
+  z-index: 88;
+  transform: translateX(-100%);
+  transition: transform 250ms ease-out; }
   .Nav ul {
     display: flex;
     flex-direction: column;
@@ -343,6 +349,8 @@ img {
         line-height: 1;
         font-family: "Six Caps", sans-serif;
         font-weight: 400; }
+  .Nav.navIsOpen {
+    transform: translateX(0); }
 
 .Hero {
   position: relative;
@@ -357,10 +365,13 @@ img {
     top: 3em;
     left: 3em;
     background: transparent;
-    border: 0; }
+    border: 0;
+    cursor: pointer; }
     .Hero .menu-button svg {
       height: 17px;
       width: 30px; }
+    .Hero .menu-button .closeIcon {
+      display: none; }
   .Hero .a, .Hero .c {
     fill: none; }
   .Hero .b {
