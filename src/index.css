@@ -442,3 +442,42 @@ img {
     .Works .Works-item:hover figcaption,
     .Works .Works-item:focus figcaption {
       top: 0; }
+
+.Contact {
+  width: 90%;
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 5rem 0; }
+  .Contact h1 {
+    text-align: center; }
+  .Contact form {
+    display: flex;
+    flex-direction: column; }
+    .Contact form label {
+      display: block;
+      margin-top: 1rem;
+      color: #606060; }
+    .Contact form input, .Contact form textarea {
+      display: block;
+      box-sizing: border-box;
+      padding: .75rem;
+      width: 100%;
+      background: #f8f9f9;
+      border: 1px solid #E8E9EB;
+      font-size: 1.2rem; }
+    .Contact form .button {
+      display: inline-block;
+      width: auto;
+      margin-top: 1rem;
+      margin-left: auto;
+      background-color: #03AFC2;
+      border: none;
+      padding: 0.5em 1.5em;
+      font-size: 2rem;
+      letter-spacing: 0.15em;
+      color: #FFF;
+      text-transform: uppercase;
+      line-height: 1;
+      font-family: "Six Caps", sans-serif;
+      font-weight: 400;
+      cursor: pointer; }
