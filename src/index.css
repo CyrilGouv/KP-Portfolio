@@ -481,3 +481,25 @@ img {
       font-family: "Six Caps", sans-serif;
       font-weight: 400;
       cursor: pointer; }
+
+.Footer {
+  padding: 5rem 0;
+  background-color: #223843;
+  text-align: center; }
+  .Footer .social-icons {
+    width: 90%;
+    max-width: 15em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.75em auto 4em; }
+    .Footer .social-icons .social-icon {
+      width: 25%;
+      height: 25%; }
+  .Footer .copyright::before {
+    display: block;
+    content: '';
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 4em auto;
+    width: 25%; }
