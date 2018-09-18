@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Nav show={this.state.navIsOpen ? true : false} />
+        <Nav show={this.state.navIsOpen ? true : false} hideMenu={ this.openMenu }/>
         <div className="wrapper" style={{ 'transform': `translateX(${this.state.navIsOpen ? 80 : 0}%)` }}>
           <Hero navIsOpen={ this.openMenu } isOpen={this.state.navIsOpen ? 'block' : 'none'} isClose={this.state.navIsOpen ? 'none' : 'block'} />
           <Welcome />

@@ -332,8 +332,9 @@ img {
     align-items: stretch;
     background-color: #03AFC2; }
     .Nav ul li {
-      border-bottom: 1px solid #223843;
       text-align: center; }
+      .Nav ul li:not(:last-of-type) {
+        border-bottom: 1px solid #223843; }
       .Nav ul li:hover {
         background-color: rgba(34, 56, 67, 0.5); }
       .Nav ul li a {
