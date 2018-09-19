@@ -7,6 +7,7 @@ import About from './Components/About';
 import Works from './Components/Works';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import Modal from './Components/Modal';
 
 import './App.css';
 
@@ -35,6 +36,7 @@ class App extends Component {
           <Welcome />
           <About />
           <Works />
+          <Modal />
           <Contact />
           <Footer />
         </div>

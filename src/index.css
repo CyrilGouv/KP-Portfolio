@@ -608,3 +608,72 @@ img {
     background-color: rgba(255, 255, 255, 0.15);
     margin: 4em auto;
     width: 25%; }
+
+.Modal {
+  position: fixed;
+  z-index: 10;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  background-color: #FFF;
+  box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none; }
+  .Modal .Modal-header {
+    padding: 5em 0;
+    text-align: left;
+    margin-bottom: 2em; }
+    .Modal .Modal-header:nth-of-type(1) {
+      background-image: url(./img/portfolio-01.jpg);
+      background-size: cover;
+      background-position: center; }
+    .Modal .Modal-header .Modal-title-box {
+      background: rgba(3, 175, 194, 0.75);
+      padding: 3em;
+      color: #FFF;
+      width: 70%; }
+      .Modal .Modal-header .Modal-title-box .Modal-title {
+        display: inline-block;
+        font-size: 3.5rem;
+        color: #FFF; }
+        .Modal .Modal-header .Modal-title-box .Modal-title::after {
+          display: block;
+          content: '';
+          height: 1px;
+          margin: .5em 0;
+          background-color: #FFF;
+          width: 100%; }
+      .Modal .Modal-header .Modal-title-box .Modal-subtitle {
+        font-size: 1rem; }
+  .Modal .Modal-content {
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+    padding-bottom: 1em; }
+    .Modal .Modal-content .portfolio-full-width {
+      width: 100vw;
+      max-width: initial;
+      margin: 2em calc(50% - 50vw);
+      height: 20vh;
+      object-fit: cover; }
+    @media (min-width: 50em) {
+      .Modal .Modal-content .portfolio-pull-left {
+        width: 65%;
+        float: left;
+        margin-right: 2em; }
+      .Modal .Modal-content .portfolio-pull-right {
+        width: 65%;
+        float: right;
+        margin-left: 2em; } }
+  .Modal .ModalClose {
+    background-color: #FFF;
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    border: 0;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer; }
