@@ -25,6 +25,19 @@ class App extends Component {
   }
 
 
+  componentDidUpdate() {
+    const { modalIsOpen } = this.state;
+    
+    if (modalIsOpen) {
+      document.addEventListener('keydown', (e) => {
+        if (e.keyCode === 27) {
+          this.closeModal();
+        }
+      });
+    }
+  }
+
+
   openMenu() {
     this.setState({ navIsOpen: !this.state.navIsOpen });
   }
@@ -34,10 +47,13 @@ class App extends Component {
     if (!e.target.classList.contains('Works-link')) return;
 
     this.setState({ modalIsOpen: !this.state.modalIsOpen });
+    document.querySelector('.Modal').style.animation = 'modalIn 500ms forwards';
   }
 
   closeModal() {
-    this.setState({ modalIsOpen: !this.state.modalIsOpen });
+    if (this.state.modalIsOpen) {
+      this.setState({ modalIsOpen: !this.state.modalIsOpen });
+    }
   }
 
 

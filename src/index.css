@@ -533,6 +533,12 @@ img {
     .Works .Works-item:focus figcaption {
       top: 0; }
 
+@keyframes modalIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .Contact {
   width: 90%;
   max-width: 50em;
@@ -618,7 +624,6 @@ img {
   right: 2em;
   background-color: #FFF;
   box-shadow: 0 0 0 5em rgba(0, 0, 0, 0.5);
-  overflow-y: scroll;
   overflow-x: hidden;
   display: none; }
   .Modal .Modal-header {
