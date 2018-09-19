@@ -15,15 +15,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      navIsOpen: false
+      navIsOpen: false,
+      modalIsOpen: false
     }
 
     this.openMenu = this.openMenu.bind(this);
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
 
   openMenu() {
     this.setState({ navIsOpen: !this.state.navIsOpen });
+  }
+
+  openModal(e) {
+    e.preventDefault();
+    if (!e.target.classList.contains('Works-link')) return;
+
+    this.setState({ modalIsOpen: !this.state.modalIsOpen });
+  }
+
+  closeModal() {
+    this.setState({ modalIsOpen: !this.state.modalIsOpen });
   }
 
 
@@ -35,8 +49,8 @@ class App extends Component {
           <Hero navIsOpen={ this.openMenu } isOpen={this.state.navIsOpen ? 'block' : 'none'} isClose={this.state.navIsOpen ? 'none' : 'block'} />
           <Welcome />
           <About />
-          <Works />
-          <Modal />
+          <Works runModal={ this.openModal } />
+          <Modal showModal={ this.state.modalIsOpen ? 'block' : 'none' } stopModal={ this.closeModal } />
           <Contact />
           <Footer />
         </div>
